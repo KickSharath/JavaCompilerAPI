@@ -12,6 +12,8 @@ const logs = [];
 
 app.use(bodyParser.text());
 
+app.use(express.static('public'));
+
 app.post('/compile', async (req, res) => {
     const javaCode = req.body;
 
