@@ -48,6 +48,6 @@ app.get('/logs', (req, res) => {
     res.json(logs);
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+app.listen(process.env.PORT || PORT, () => {
+    console.log(`Server is running on port ${process.env.PORT || PORT}`);
 });
